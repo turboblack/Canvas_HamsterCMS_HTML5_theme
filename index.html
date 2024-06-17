@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<style>
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(33,55,64);
+    background: radial-gradient(circle, rgba(33,55,64,1) 0%, rgba(0,0,0,1) 100%);
+    color: #444;
+    font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+    font-size: 12px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#bg1 {
+    z-index: -1;
+    filter: blur(1px);
+}
+
+#bg2 {
+    z-index: -2;
+    filter: blur(10px);
+}
+
+a {color: #005784;}
+a:hover {color: #28E;}
+
+.top {
+    background-color:#c0c0c0;
+    width:auto;
+    height:25px;
+}
+
+.topb {
+    background-color:#213740;
+    width:auto;
+    height:5px;
+}
+
+.main {
+    background:linear-gradient(-45deg, transparent 35px, #fff 0);
+    font-size: 1.2em;
+    margin: 0 auto;
+    width: 75%;
+    border: 0px solid #DFEEF7;
+}
+
+.content {
+    background: rgb(241,241,241);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(121,121,121,1) 75%, rgba(255,255,255,1) 100%);
+    float: right;
+    margin: 0px 0;
+    padding: 0 8px;
+    width: 75%;
+}
+
+.title {
+    color:#579;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 4px;
+}
+
+.date {
+    font-size: 9px;
+    margin:3px;
+}
+
+h1 {
+    font: 20px verdana;
+    color: #000066;
+    margin: 5px;
+}
+
+h2 {
+    font-size:14px;
+    color:#787878;
+    margin:9px;
+}
+
+h3 {
+    color:#579;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.insidebox {
+    width: auto;
+    line-height: 20px;
+    color: #555A60;
+    font-size:12px;
+    padding: 5px 6px 0px 6px;
+    background-color:#f9f9f9;
+    border:1px solid #efefef;
+    text-align: justify;
+    height: auto;
+}
+
+.archive {
+    width:100px;
+    line-height: 20px;
+    font-size:10px;
+    background-color: #f4f1f1;
+    border:1px solid #DDDDDD;
+    float:left;
+    text-align:center;
+}
+
+li {list-style: none;}
+
+.navigation {
+    float: left;
+    text-align:left;
+    width: 20%;
+    background-color:#ffffff;
+    border:0px solid #efefef;
+    color:#666666;
+    font-size: 0.9em;
+    margin-top:18px;
+    margin-left:10px;
+}
+.navigation h2 {
+    color:#5A5A43;
+    font-size: 1.1em;
+    line-height: 12px;
+    padding-left:8px;
+}
+.navigation ul {
+    padding: 0;
+    border-top: 1px solid #DDDDDD;
+    margin: 0;
+}
+
+.navigation li {border-bottom: 1px solid #EAEADA;}
+
+.navigation li a {
+    color: #005784;
+    background: #f7f7f7;
+    font-size: 1.1em;
+    display: block;
+    padding: 8px 0 8px 3%;
+    text-decoration: none;
+    width: 90%;
+}
+
+.navigation-label {
+    display: none !important;
+}
+
+.navigation li a:hover {
+    background: #5c5c5c;
+    color: #28E;
+}
+
+.clearer {clear: both;}
+
+.footer {
+    width: auto;
+    line-height: 20px;
+    color: #555A60;
+    font-size:10px;
+    background: #f4f4f4;
+    background:linear-gradient(-45deg, transparent 35px, #f4f4f4 0);
+    border:0px solid #DDDDDD;
+    text-align: center;
+    height: auto;
+}
+</style>
+</head>
+<body>
+
+<div class="main">
+
+<div class="top"></div>
+<h1>Title</h1>
+<h2>slogan</h2>
+
+<div class="topb"></div>
+
+<div class="navigation">
+   <h2><center>-MENU-</center></h2>
+   <ul>
+     <li>[[NAVIGATION]]</li>
+   </ul>
+   <div><br /><br />
+       [[about.txt]]
+   </div>
+</div>
+
+<div class="content">
+    <div class="insidebox">
+        [[CONTENTS]]
+    </div>
+    <br />
+</div>
+
+<div class="clearer"><span></span></div>
+<br />
+<div class="footer">
+    [[footer.txt]]
+    <br />
+    Зроблено в Україні
+</div>
+
+</div>
+<canvas id="bg2"></canvas>
+<!-- partial -->
+<script src='https://cdn.rawgit.com/liabru/matter-js/306dc024/build/matter.min.js'></script>
+<script src='https://cdn.rawgit.com/liabru/matter-wrap/43be2639/build/matter-wrap.min.js'></script><script src="/templates/canvas/script.js"></script>
+
+</body>
+</html>
